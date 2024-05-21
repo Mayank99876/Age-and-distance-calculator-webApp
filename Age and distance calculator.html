@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <style>
-    .header{
+    .hot-header{
         color: white;
         background-color: rgb(37, 37, 246);
         padding: 20px;
@@ -20,7 +20,7 @@
         margin-bottom: 20px;
     }
 
-    .container{
+    .hot-container{
         margin: 50px auto;
         background-color: rgb(247, 247, 247);
         border:2px solid rgb(231, 228, 228);
@@ -36,11 +36,11 @@
         height: 100%;
     }
 
-    .result{
+    .answers{
         margin-top: 20px;
     }
 
-    .result p{
+    .answers p{
         font-weight: bold;
         margin-bottom: 5px;
     }
@@ -59,10 +59,10 @@
 
 </style>
 <body>
-    <div class="header">
+    <div class="hot-header">
         <h1>Age and distance convertor</h1>
     </div>
-    <div class="container">
+    <div class="hot-container">
         <div class="row">
             <div class="col-md-6">
             <div class="convertor-section">
@@ -72,7 +72,7 @@
                     <input type="date" class="form-control" id="dob"> 
                 </div>
                     <button class="btn btn-primary mt-3" onclick="calculateAge()">Calculate Age</button>  
-                    <div class="result">
+                    <div class="answers">
                         <p>In Years: <span id="years"></span></p>
                         <p>In Months: <span id="months"></span></p>
                         <p>In Hours: <span id="hours"></span></p>
@@ -98,7 +98,7 @@
                         </div>
                             <br>
                             <button class="btn btn-primary mt-3" onclick="calculatedistance()">Convert</button>
-                            <div class="result">
+                            <div class="answers">
                                 <p>In kilometers: <span id="km"></span></p>
                                 <p>In meters: <span id="m"></span></p>
                                 <p>In inches: <span id="in"></span></p>
@@ -115,7 +115,7 @@
 
     <script>
         function calculateAge(){
-         var dateOdBirth = document.getElementById('dob').value;
+         var dateOfBirth = document.getElementById('dob').value;
          var birthDate1 = new Date(dateOfBirth);
          var today1 = new Date();
          var ageInYears = today1.getFullYear() - birthDate1.getFullYear();
